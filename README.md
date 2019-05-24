@@ -36,7 +36,7 @@ Hello, World!
 Essentially, you can store a code block as a variable and call it as a way to run code. This is effectively a way to store a simple program within a `pro`gram.
 
 ### Functions
-Also, a `pro` is not a `fun`ction. 
+Also, a `pro`gram is not a `fun`ction. 
 
 ```
 fun add = int (int a, int b) {
