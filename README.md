@@ -70,6 +70,7 @@ fun _main = int () {
 
   return 0;
 }
+```
 
 ### Other data types.
 The rest of the code is actually pretty simple. You have the standard data types, such as integers, doubles, floats, chars, strings, arrays, etc., defined as follows.
