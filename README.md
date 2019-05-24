@@ -16,12 +16,14 @@ The Guup syntax is not super complex, but it has several main parts to it. First
 ### Programs
 
 ```
-prog hello = {
+pro hello = {
   println("Hello, World!");
 };
 
-func _main = (str *args) {
-  %hello
+fun _main = int () {
+  %hello;
+
+  return 0;
 };
 ```
 
@@ -37,12 +39,14 @@ Essentially, you can store a code block as a variable and call it as a way to ru
 Also, a `prog` is not a function. 
 
 ```
-func add = (int a, int b) {
-  return a + b;
+fun add = int (int a, int b) {
+  return $a + $b;
 }
 
-func _main = (str *args) {
-  println(%(1,2)add)
+fun _main = int () {
+  %(%(1,2)add)println;
+
+  returb 0;
 };
 ```
 
@@ -53,6 +57,19 @@ It's output
 ```
 
 The above code is also pretty simple, and it outlines the function structure. One important thing to remember is that a `func` *is* a `prog`. Earlier I said that programs are objects. What is happening is that a function is like a `prog` with command line arguments. In the example case, it assigns the variables `a` and `b` to `1` and `2` before letting the function run. These are local variables, so they don't get assigned to the global context.
+
+Another thing you can do with a function is to add default arguments.
+
+```
+fun sayHello = nul (str name<"World">) {
+  %("Hello, ":$name:"!")println
+}
+
+fun _main = int () {
+  %()sayHello;
+
+  return 0;
+}
 
 ### Other data types.
 The rest of the code is actually pretty simple. You have the standard data types, such as integers, doubles, floats, chars, strings, arrays, etc., defined as follows.
@@ -78,4 +95,36 @@ Now for the list definitions.
 int[] numArr = int[1 2 3 4 5 6];
 ```
 
-The list syntax is simple. There are no commas for lists. Only space separation. 
+The list syntax is simple. There are no commas for lists. Only space separation.
+
+### Referencing
+Referencing variables is pretty easy.
+
+```
+fun _main = int () {
+  int a = 22;
+  %($a)println;
+  
+  return 0;
+}
+```
+
+You just use the `$` character followed by the name of the variable.
+
+As you might've seen, you can execute a `fun`ction or a `pro`gram by using the `%` selector. You can also reference them by using the `$` selector.
+
+```
+pro oopsie = {
+  %('oops')println;
+};
+
+fun doWhatThing = nul (pro thatThing) {
+  %thatThing;
+};
+
+fun _main = int () {
+  %($oopsie)doWhatThing;
+
+  return 0;
+};
+```
