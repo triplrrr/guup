@@ -46,7 +46,7 @@ fun add = int (int a, int b) {
 fun _main = int () {
   %(%(1,2)add)println;
 
-  returb 0;
+  return 0;
 };
 ```
 
@@ -56,7 +56,7 @@ It's output
 3
 ```
 
-The above code is also pretty simple, and it outlines the `fun`ction structure. One important thing to remember is that a `fun`ction *is* a `pro`gram. Earlier I said that programs are objects. What is happening is that a `fun`ction is like a `pro`gram with command line arguments. In the example case, it assigns the variables `a` and `b` to `1` and `2` before letting the `fun`ction run. These are local variables, so they don't get assigned to the global context.
+The above code is also pretty simple, and it outlines the `fun`ction structure. One important thing to remember is that a `fun`ction *is* a `pro`gram. Earlier I said that programs are objects. What is happening is that a `fun`ction is like a `pro`gram with command line arguments. In the example case, it assigns the values `1` and `1` to `a` and `b` respectively, before letting the `fun`ction run. These are local variables, so they don't get assigned to the global context.
 
 Another thing you can do with a `fun`ction is to add default arguments.
 
