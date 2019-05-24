@@ -33,10 +33,10 @@ The above Guup code can be executed, and the output is very simple.
 Hello, World!
 ```
 
-Essentially, you can store a code block as a variable and call it as a way to run code. This is effectively a way to store a simple program within a program.
+Essentially, you can store a code block as a variable and call it as a way to run code. This is effectively a way to store a simple program within a `pro`gram.
 
 ### Functions
-Also, a `prog` is not a function. 
+Also, a `pro` is not a `fun`ction. 
 
 ```
 fun add = int (int a, int b) {
@@ -56,9 +56,9 @@ It's output
 3
 ```
 
-The above code is also pretty simple, and it outlines the function structure. One important thing to remember is that a `func` *is* a `prog`. Earlier I said that programs are objects. What is happening is that a function is like a `prog` with command line arguments. In the example case, it assigns the variables `a` and `b` to `1` and `2` before letting the function run. These are local variables, so they don't get assigned to the global context.
+The above code is also pretty simple, and it outlines the `fun`ction structure. One important thing to remember is that a `fun` *is* a `pro`. Earlier I said that programs are objects. What is happening is that a `fun`ction is like a `pro`gram with command line arguments. In the example case, it assigns the variables `a` and `b` to `1` and `2` before letting the `fun`ction run. These are local variables, so they don't get assigned to the global context.
 
-Another thing you can do with a function is to add default arguments.
+Another thing you can do with a `fun`ction is to add default arguments.
 
 ```
 fun sayHello = nul (str name<"World">) {
